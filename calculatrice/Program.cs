@@ -12,8 +12,6 @@ namespace calculatrice
         {
             Console.WriteLine("bienvenue dans la calculatrice de thomas");
 
-            //Console.WriteLine("entrer une opération");
-
             //déclaration des variables
             //
             Console.WriteLine();
@@ -21,40 +19,44 @@ namespace calculatrice
             Console.WriteLine("entrer un chiffre puis valider");
             int chiffre1 = Convert.ToInt32(Console.ReadLine());
 
-            //char opération;
-
-
-
-            //Console.WriteLine(chiffre1);
+            //
             Console.WriteLine("entrer une opération");
 
-            char opération = Convert.ToChar(Console.ReadLine());
+            string opération = Console.ReadLine();
 
             Console.WriteLine("entrer un chiffre puis valider");
 
             int chiffre2 = Convert.ToInt32(Console.ReadLine());
 
-            int resultat;
 
 
-            switch ((opération))
+            switch (opération)
             {
-                case Convert.ToChar("+"):
+                case ("+"):
                     Console.WriteLine(chiffre1 + chiffre2);
+                    Console.ReadLine();
                     break;
-                    /*case 2:
-                       Console.WriteLine("Tuesday");
-                        break;
-                    case 3:
-                       Console.WriteLine("Wednesday");
-                        break;
-                    case 4:
-                        Console.WriteLine("Thursday");
-                        break;
-                    case 5:
-                        Console.WriteLine("Friday");*/
+
+                case ("-"):
+                    Console.WriteLine(chiffre1 - chiffre2);
+                    Console.ReadLine();
+                    break;
+
+                case ("*"):
+                    Console.WriteLine(chiffre1 * chiffre2);
+                    Console.ReadLine();
+                    break;
+
+                case ("/"):
+                    Console.WriteLine(chiffre1 / chiffre2);
+                    Console.ReadLine();
+                    break;
+
             }
+
             Console.WriteLine("resultat:");
-            Console.WriteLine(resultat);
+
+
         }
+    }
 }
